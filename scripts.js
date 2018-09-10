@@ -40,7 +40,7 @@ buyClickPower.addEventListener('click', function () {
         // Update click price
         clickPowerPriceAmount = Math.floor(clickPowerPriceAmount * 1.33);
         // Update click power
-        clickPower += 1;
+        clickPower += 1 * Math.floor(clickPowerLevelNumber * 1.05);
         // refresh shop  items
         refreshPowerClick()
     } else {
@@ -92,7 +92,7 @@ grandmaLevelNumber += 1;
 //update grandmaPrice
 grandmaPriceAmount = Math.floor(grandmaPriceAmount * 1.33);
 //update grandma Power
-grandmaPower += 10;
+grandmaPower += 10 + Math.floor(grandmaLevelNumber * 1.33);
 //turn autoGrandma on!
 autoGrandma = true;
 autoGrandmaStart();
@@ -124,7 +124,7 @@ let refreshGrandma = function() {
 // set default values
 let facilityAuto = false;
 let facilityPower = 2000;
-let facilityPriceAmount = 100000;
+let facilityPriceAmount = 10000;
 let facilityLevelNumber = 0;
 
 //declare DOM variables
@@ -147,7 +147,7 @@ facilityLevelNumber += 1;
     //update price
 facilityPriceAmount = Math.floor(facilityPriceAmount * 1.33);
     //update facility Power
-facilityPower += 600;
+facilityPower += 600 + Math.floor(facilityLevelNumber * 1.33);
     //turn autoFacility on!
 facilityAuto = true;
 autoFacilityStart();
